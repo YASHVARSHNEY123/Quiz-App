@@ -1,0 +1,305 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+
+.start_button , .Info , .quiz_box , .result_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.Info.active , .quiz_box.activeQuiz , .result_box.activeResult{
+    opacity :1;
+    pointer-events: auto;
+    z-index: 6;
+}
+
+.start_button button{
+    font-size: 25px;
+    border-radius: 5px;
+    color:blue;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    padding: 15px 35px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.Info{
+    background-color: white;
+    /* padding: 25px 25px; */
+    width: 600px;
+    opacity :0;
+    pointer-events: none;
+    /* display: none; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.Info_title{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightskyblue;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Info_Rules{
+   padding: 15px 35px;
+}
+
+.inf{
+    margin: 15px;
+    font-size: 20px;
+}
+
+.buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px 20px;
+    border-top: 1px solid lightskyblue;
+
+}
+.buttons button{
+    margin: 2.5px;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px;
+    /* border: none; */
+    /* color: white; */
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.Exit{
+    color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.Exit:hover{
+    color: white;
+    background: cornflowerblue;
+}
+
+.Continue{
+    color: white;
+    border-color: cornflowerblue;
+    background: cornflowerblue;
+}
+
+.quiz_box{
+    opacity:0;
+    pointer-events: none;
+    background-color: white;
+    width: 550px;
+    border-radius: 5px;
+    height: 450px;
+}
+
+.quiz_box header{
+    display: flex;
+    justify-content: space-around;
+    padding: 17px;
+    border-bottom: 1px solid lightskyblue;
+    margin-bottom: 15px;
+}
+
+.title{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+    background-color: aquamarine;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.time_left_txt{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.timer_sec{
+    color: white;
+    background-color: black;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.quiz_box header .timeline{
+    position: absolute;
+    height: 3px;
+    /* width: 100%; */
+    background-color: red;
+    left: 0px;
+    bottom:0px ;
+}
+
+section{
+    padding: 20px;
+    background-color: white;
+}
+
+.que_text{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.option_list{
+    /* background-color: aliceblue; */
+    /* margin: 5px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    font-size: 20px;
+}
+
+.option{
+    margin-bottom: 10px;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: aliceblue;
+    display: flex;
+    cursor: pointer;
+}
+.option.correct{
+    background-color: greenyellow;
+}
+.option.incorrect{
+    background-color: lightcoral;
+}
+.option.disabled{
+    pointer-events: none;
+}
+
+.option:hover{
+    background-color: lightcyan;
+}
+footer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.total_que span{
+  display: flex;
+}
+
+.total_que span p{
+    padding: 0 5px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.next_btn{
+    width: 130px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.next_btn:hover{
+    /* background-color: aliceblue; */
+    color: black;
+}
+
+.result_box{
+    /* display: none */
+    opacity: 0;
+    background: white;
+    padding: 10px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.Rcomplete_text{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.Rscore_text span{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 10px;
+    /* font-weight: 700; */
+}
+
+.Rscore_text span p{
+    padding: 0 4px;
+    font-weight: 700;
+}
+
+.Rbuttons{
+    margin-top: 15px;
+}
+
+.Rbuttons button{
+    margin: 2.5px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    /* border: none; */
+    /* color: white; */
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.restart{
+    background: cornflowerblue;
+    color: white;
+}
+.restart:hover{
+    color: black;
+}
+
+.quit{
+    color: cornflowerblue;
+}
+
+.quit:hover{
+    background: cornflowerblue;
+    color: black;
+}
+
+
+
+
+
+
